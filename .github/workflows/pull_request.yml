@@ -1,0 +1,17 @@
+name: Pull Request Actions
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run test step
+        run: |
+          docker build -f Dockerfile.unit .
