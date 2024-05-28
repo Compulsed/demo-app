@@ -25,3 +25,10 @@ EXPOSE 80
 CMD ["npm", "start"]
 
 
+# Push repo to Github
+
+# CI
+# - Run tests
+
+# CD
+# - Building & pushing docker container
